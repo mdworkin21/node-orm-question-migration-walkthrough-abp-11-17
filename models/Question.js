@@ -5,7 +5,7 @@ const db = require("../config/db")
 class Question{
 
   static CreateTable(){
-    let getTableInfo = new Promise(function (){resolve()})
+    let getTableInfo = new Promise(function (resolve){resolve()})
   }
 
 }
