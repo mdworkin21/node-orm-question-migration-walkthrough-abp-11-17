@@ -3,16 +3,14 @@
 const db = require("../config/db")
 
 class Question{
-
-  static CreateTable(){
+  static CreateTable() {
     return new Promise(function(resolve){
-      const sql = `SELECT * FROM sqlite_master WHERE type = 'table' AND name = ?`
-      let tableName = .CreateTable()
-      db.get(sql, [ tableName], function(err, row){
-        resolve(row);
-      });
+      const sql = `CREATE TABLE questions (id INTEGER PRIMARY KEY)`
+      db.run(sql, function(){
+        resolve("questions table created")
+      })      
     })
-  }}
-
+  }
+}
 
 module.exports = Question;
