@@ -7,7 +7,7 @@ class Question{
   static CreateTable(){
     return new Promise(function(resolve){
       const sql = `SELECT * FROM sqlite_master WHERE type = 'table' AND name = ?`
-      db.get(sql, [ tableName ], function(err, row){
+      db.get(sql, [ questions], function(err, row){
         resolve(row);
       });
     })
