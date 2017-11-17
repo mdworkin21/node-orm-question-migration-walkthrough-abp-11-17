@@ -10,7 +10,7 @@ class Question{
       db.get(sql, [ tableName ], function(err, row){
           resolve(row)})
 
-      
+
   })
 
 }
